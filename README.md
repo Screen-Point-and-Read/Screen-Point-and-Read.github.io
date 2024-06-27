@@ -3,7 +3,7 @@
 
 This is the repository that contains source code for the [Screen Point-and-Read website](screen-point-and-read.github.io).
 
-If you find MMWorld useful for your work please cite:
+<!-- If you find MMWorld useful for your work please cite: -->
 ```
 ```
 
