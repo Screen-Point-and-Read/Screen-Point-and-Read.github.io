@@ -119,3 +119,23 @@ bbox,bbox_large,output
 (2) It is located at the top right corner of the screen, within a smaller box that is situated on the right side of a larger box, which is across the top section of the complete screen."
 "[0.0, 30.0, 90.0, 30.0, 0.0]","[0.0, 18.0, 360.0, 48.0, 2.0]","(1) This is the eBay logo.
 (2) It is located at the upper left corner of the screen."
+"[0, 18, 360, 48, 2]","[0, 0, 360, 640, 0]","(1) This is the eBay logo.
+
+(2) The eBay logo is positioned towards the upper left corner of the screen, within the header area that includes the search bar and navigation buttons. The header area itself spans the top part of the complete screen."
+"[0, 66, 360, 574, 4]","[0, 0, 360, 640, 0]","(1) This is the eBay logo.
+
+(2) It is located at the top of the screen."
+"[0, 66, 360, 48, 4]","[0, 0, 360, 640, 0]","(1) This is the eBay logo along with a search bar where users can search for items on eBay.
+(2) It is located at the top of the screen. The search bar is within the second section from the top, immediately below the logo area."
+"[0, 120, 360, 42, 8]","[0, 0, 360, 640, 0]","(1) This is the ""Search on eBay"" input field.
+(2) It is located near the top of the screen, just below the eBay logo."
+"[0, 162, 360, 120, 12]","[0, 0, 360, 640, 0]","(1) This is the ""Search on eBay"" bar and the navigation buttons underneath it.
+(2) It is located at the top of the screen."
+"[0, 282, 360, 120, 15]","[0, 0, 360, 640, 0]","(1) This is a button labeled ""Get the coupon.""
+(2) It is located in the top section of the screen. Specifically, it is within the maroon-colored banner below the search bar and navigation buttons section. This banner is nearer to the top of the entire screen layout."
+"[0, 580, 360, 60, 29]","[0, 0, 360, 640, 0]","(1) Get the coupon button for a 20% off promotion. 
+
+(2) Located within the promotional section, which is second from the top and directly below the search bar and category buttons. This section itself is towards the upper part of the screen, approximately one-third from the top."
+"[0, 0, 360, 25, 0]","[0, 0, 360, 640, 0]","(1) This is the time, network status, and battery indicator area of a mobile interface, displaying ""11:23"", signal strength, 3G status, and battery level.
+
+(2) It is located at the top left corner of the screen within the search and browsing app interface."
