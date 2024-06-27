@@ -1,121 +1,121 @@
 bbox,bbox_large,output
-"[1296, 84, 144, 168, 12]","[0, 72, 1440, 192, 8]","(1) This is a shopping cart icon.
+"[324.0, 21.0, 36.0, 42.0, 3.0]","[0.0, 18.0, 360.0, 48.0, 2.0]","(1) This is a shopping cart icon.
 
 (2) It is located in the top right corner of the screen, inside the bar that contains the eBay logo and the search bar."
-"[0, 264, 1440, 192, 17]","[0, 264, 1440, 2296, 16]","(1) This is the logo of eBay. 
+"[0.0, 66.0, 360.0, 48.0, 4.0]","[0.0, 66.0, 360.0, 574.0, 4.0]","(1) This is the logo of eBay. 
 
 (2) It is located at the top-left corner of the box containing the search options, category links, and promotional information. This entire box is at the top of the screen."
-"[0, 264, 1440, 192, 18]","[0, 264, 1440, 2296, 16]","(1) This is the eBay search bar.
+"[0.0, 66.0, 360.0, 48.0, 4.0]","[0.0, 66.0, 360.0, 574.0, 4.0]","(1) This is the eBay search bar.
 (2) It is located at the top of the content area from the third to the twelfth of the visible screen."
-"[1098, 288, 144, 144, 22]","[0, 264, 1440, 192, 18]","(1) This is a microphone icon. 
+"[274.0, 72.0, 36.0, 36.0, 5.0]","[0.0, 66.0, 360.0, 48.0, 4.0]","(1) This is a microphone icon. 
 
 (2) It is located within the search bar, towards the right end. The search bar itself is near the top of the screen, right below the eBay logo."
-"[1242, 288, 144, 144, 25]","[0, 264, 1440, 192, 18]","(1) This is an icon of a camera. 
+"[310.0, 72.0, 36.0, 36.0, 6.0]","[0.0, 66.0, 360.0, 48.0, 4.0]","(1) This is an icon of a camera. 
 (2) It is located at the right end of the search bar on the top of the screen."
-"[0, 480, 1440, 168, 31]","[0, 264, 1440, 2296, 16]","(1) This is the search bar with options like ""Selling"", ""Saved"", ""Deals"", and ""eBay Live"".
+"[0.0, 120.0, 360.0, 42.0, 7.0]","[0.0, 66.0, 360.0, 574.0, 4.0]","(1) This is the search bar with options like ""Selling"", ""Saved"", ""Deals"", and ""eBay Live"".
 (2) It is located at the top of its containing section and in the upper portion of the complete screen display, right below the eBay logo and top status indicators."
-"[0, 480, 1440, 168, 32]","[0, 264, 1440, 2296, 16]","(1) This is the search bar with the option to enter text to search for items, and quick access buttons for selling, saved, deals, eBay Live, and more.
+"[0.0, 120.0, 360.0, 42.0, 8.0]","[0.0, 66.0, 360.0, 574.0, 4.0]","(1) This is the search bar with the option to enter text to search for items, and quick access buttons for selling, saved, deals, eBay Live, and more.
 
 (2) It is located at the top of a section with various offers. This section is situated at the top portion of the overall screen, just below the eBay logo and time display."
-"[48, 480, 272, 144, 33]","[0, 480, 1440, 168, 32]","(1) This is the ""Selling"" button.
+"[12.0, 120.0, 68.0, 36.0, 8.0]","[0.0, 120.0, 360.0, 42.0, 8.0]","(1) This is the ""Selling"" button.
 (2) It is located towards the left side of a horizontal menu bar, which is just below the search bar. The entire menu bar is situated near the top of the screen."
-"[344, 480, 265, 144, 35]","[0, 480, 1440, 168, 32]","(1) The button in focus is labeled ""Saved.""
+"[86.0, 120.0, 66.0, 36.0, 8.0]","[0.0, 120.0, 360.0, 42.0, 8.0]","(1) The button in focus is labeled ""Saved.""
 (2) It is located within a horizontal navigation bar, which is situated near the top of the screen, below the search bar and above the promotional offers."
-"[633, 480, 254, 144, 38]","[0, 480, 1440, 168, 32]","(1) Deals button. 
+"[158.0, 120.0, 63.0, 36.0, 9.0]","[0.0, 120.0, 360.0, 42.0, 8.0]","(1) Deals button. 
       
 (2) It is located in the list of buttons below the search bar and above the promotional banner on the screen, specifically to the right of the Selling and Saved buttons."
-"[911, 480, 319, 144, 42]","[0, 480, 1440, 168, 32]","(1) ""eBay Live"" button. 
+"[227.0, 120.0, 79.0, 36.0, 10.0]","[0.0, 120.0, 360.0, 42.0, 8.0]","(1) ""eBay Live"" button. 
 (2) This button is within the icon strip located at the top of the screen, just below the search bar."
-"[1254, 480, 186, 144, 47]","[0, 480, 1440, 168, 32]","(1) This is the ""Motors"" button.
+"[313.0, 120.0, 46.0, 36.0, 11.0]","[0.0, 120.0, 360.0, 42.0, 8.0]","(1) This is the ""Motors"" button.
 (2) It is located in the top row of category buttons in the navigation section just below the search bar, and this entire navigation section is situated toward the top of the screen under the eBay logo and search bar."
-"[0, 648, 1440, 480, 49]","[0, 264, 1440, 2296, 16]","(1) This is the Search on eBay section.
+"[0.0, 162.0, 360.0, 120.0, 12.0]","[0.0, 66.0, 360.0, 574.0, 4.0]","(1) This is the Search on eBay section.
 (2) It is located at the top of the screen under the eBay logo."
-"[0, 648, 1440, 480, 50]","[0, 264, 1440, 2296, 16]","(1) This is the eBay search bar and the buttons for Selling, Saved, Deals, and other options.
+"[0.0, 162.0, 360.0, 120.0, 12.0]","[0.0, 66.0, 360.0, 574.0, 4.0]","(1) This is the eBay search bar and the buttons for Selling, Saved, Deals, and other options.
 (2) It is located at the top of the promotional area for ""20% off décor, cookware, and more."" This entire section is situated in the top portion of the complete screen, just below the eBay logo and the status bar."
-"[48, 744, 1047, 79, 54]","[0, 648, 1440, 480, 50]","(1) This is a promotional text offering ""20% off décor, cookware, and more.""
+"[12.0, 186.0, 261.0, 19.0, 13.0]","[0.0, 162.0, 360.0, 120.0, 12.0]","(1) This is a promotional text offering ""20% off décor, cookware, and more.""
 
 (2) It is located inside a section near the top of the screen, directly underneath the navigation bar with options like ""Selling,"" ""Saved,"" and ""Deals."""
-"[48, 835, 1188, 53, 56]","[0, 648, 1440, 480, 50]","(1) This is a promotional text that reads: ""20% off décor, cookware, and more. Bring on the joy of hosting with top home brands. Ends 11/5.""
+"[12.0, 208.0, 297.0, 13.0, 14.0]","[0.0, 162.0, 360.0, 120.0, 12.0]","(1) This is a promotional text that reads: ""20% off décor, cookware, and more. Bring on the joy of hosting with top home brands. Ends 11/5.""
 
 (2) It is located at the beginning of the promotional text ""20% off décor, cookware, and more."" in the discount section. This section is directly below the search bar and associated category buttons on the main screen."
-"[48, 936, 462, 144, 59]","[0, 648, 1440, 480, 50]","(1) This is a button labeled ""Get the coupon.""
+"[12.0, 234.0, 115.0, 36.0, 14.0]","[0.0, 162.0, 360.0, 120.0, 12.0]","(1) This is a button labeled ""Get the coupon.""
 (2) It is located within a section offering ""20% off décor, cookware, and more"" which is situated near the top part of the screen, just below the search bar and icons."
-"[0, 1128, 1440, 480, 62]","[0, 264, 1440, 2296, 16]","(1) This is a ""Get the coupon"" button offering 20% off décor, cookware, and more, with a promotional message.
+"[0.0, 282.0, 360.0, 120.0, 15.0]","[0.0, 66.0, 360.0, 574.0, 4.0]","(1) This is a ""Get the coupon"" button offering 20% off décor, cookware, and more, with a promotional message.
 
 (2) It is located near the top of the screen. Firstly, it sits in the upper section of a promotional area that offers two different sections. Secondly, this entire promotional area is situated below the search bar and category icons, towards the top of the overall screen."
-"[0, 1128, 1440, 480, 63]","[0, 264, 1440, 2296, 16]","(1) This is a promotion offering a 20% discount on décor, cookware, and more, along with the option to get a coupon.
+"[0.0, 282.0, 360.0, 120.0, 15.0]","[0.0, 66.0, 360.0, 574.0, 4.0]","(1) This is a promotion offering a 20% discount on décor, cookware, and more, along with the option to get a coupon.
 
 (2) It is located inside a section towards the top of a larger page. The section itself is near the top of the overall complete screen, just below the search bar and quick access buttons."
-"[48, 1224, 996, 79, 67]","[0, 1128, 1440, 480, 63]","(1) This is a promotional message stating, ""Optimize your ride's performance. Get ECUs, alternators, starters, and more.""
+"[12.0, 306.0, 249.0, 19.0, 16.0]","[0.0, 282.0, 360.0, 120.0, 15.0]","(1) This is a promotional message stating, ""Optimize your ride's performance. Get ECUs, alternators, starters, and more.""
 
 (2) It is located in a section below the ""20% off décor, cookware, and more"" banner. This section appears about a third of the way down the screen."
-"[48, 1315, 833, 53, 69]","[0, 1128, 1440, 480, 63]","(1) This is a promotion for optimizing your ride's performance, highlighting products such as ECUs, alternators, and starters.
+"[12.0, 328.0, 208.0, 13.0, 17.0]","[0.0, 282.0, 360.0, 120.0, 15.0]","(1) This is a promotion for optimizing your ride's performance, highlighting products such as ECUs, alternators, and starters.
 
 (2) This text is inside a black box directly below a maroon promotion box on the screen. The maroon box offers a discount on décor, cookware, and other items. Both boxes are located below the search and navigation bar."
-"[48, 1416, 344, 144, 72]","[0, 1128, 1440, 480, 63]","(1) This is a ""Shop now"" button related to car parts and accessories.
+"[12.0, 354.0, 86.0, 36.0, 18.0]","[0.0, 282.0, 360.0, 120.0, 15.0]","(1) This is a ""Shop now"" button related to car parts and accessories.
 (2) It is located within the section about optimizing car performance, which is just below the section offering a 20% discount on décor, cookware, and more, and above the ""Shop Categories"" section on the overall screen."
-"[0, 1632, 1440, 880, 76]","[0, 264, 1440, 2296, 16]","(1) This is an image of a set of categories titled ""Shop Categories"". The categories include Motors, Sneakers, and Watches.
+"[0.0, 408.0, 360.0, 220.0, 19.0]","[0.0, 66.0, 360.0, 574.0, 4.0]","(1) This is an image of a set of categories titled ""Shop Categories"". The categories include Motors, Sneakers, and Watches.
 (2) It is located at the bottom section of the screen."
-"[0, 1632, 1440, 127, 77]","[0, 264, 1440, 2296, 16]","(1) Shop Categories
+"[0.0, 408.0, 360.0, 31.0, 19.0]","[0.0, 66.0, 360.0, 574.0, 4.0]","(1) Shop Categories
 (2) It is located below the ""Optimize your ride's performance"" section, near the lower part of the screen."
-"[48, 1783, 436, 557, 82]","[0, 264, 1440, 2296, 16]","(1) This is a ""Motors"" category showing an image of a car tire and rim.
+"[12.0, 445.0, 109.0, 139.0, 20.0]","[0.0, 66.0, 360.0, 574.0, 4.0]","(1) This is a ""Motors"" category showing an image of a car tire and rim.
 
 (2) It is located in the ""Shop Categories"" section found towards the bottom of the overall screen. This section is within a larger area beneath the promotional banners and search bar on the screen."
-"[48, 2227, 420, 113, 85]","[0, 2320, 1440, 240, 118]","(1) This is the ""Motors"" category.
+"[12.0, 556.0, 105.0, 28.0, 21.0]","[0.0, 580.0, 360.0, 60.0, 29.0]","(1) This is the ""Motors"" category.
 (2) It is located in the shop categories section, near the bottom of the screen above the navigation bar."
-"[508, 1783, 424, 557, 87]","[0, 264, 1440, 2296, 16]","(1) Sneakers.
+"[127.0, 445.0, 106.0, 139.0, 21.0]","[0.0, 66.0, 360.0, 574.0, 4.0]","(1) Sneakers.
 (2) It is located to the right of the Motors item in the Shop Categories section. This section is placed below the ""Optimize your ride's performance"" banner, which in turn is below the ""20% off décor, cookware, and more"" banner, on the main screen."
-"[508, 2227, 420, 113, 90]","[0, 2320, 1440, 240, 118]","(1) Sneakers
+"[127.0, 556.0, 105.0, 28.0, 22.0]","[0.0, 580.0, 360.0, 60.0, 29.0]","(1) Sneakers
 (2) The item is part of the ""Shop Categories"" section, located between ""Motors"" and ""Watches."" This section is positioned just above the bottom navigation bar, which is at the bottom of the screen."
-"[956, 1783, 436, 557, 93]","[0, 264, 1440, 2296, 16]","(1) This is an image of a watch. 
+"[239.0, 445.0, 109.0, 139.0, 23.0]","[0.0, 66.0, 360.0, 574.0, 4.0]","(1) This is an image of a watch. 
 (2) It is located on the right side of the ""Shop Categories"" section within the ""Watches"" category, which is towards the bottom of the screen."
-"[956, 2227, 420, 113, 96]","[0, 2320, 1440, 240, 118]","(1) Watches.
+"[239.0, 556.0, 105.0, 28.0, 24.0]","[0.0, 580.0, 360.0, 60.0, 29.0]","(1) Watches.
 (2) Located within the ""Shop Categories"" section between ""Sneakers"" and the navigation bar at the bottom, in the bottom part of the screen."
-"[0, 2320, 1440, 240, 117]","[0, 264, 1440, 2296, 16]","(1) This is a ""Home"" icon for navigation.
+"[0.0, 580.0, 360.0, 60.0, 29.0]","[0.0, 66.0, 360.0, 574.0, 4.0]","(1) This is a ""Home"" icon for navigation.
 
 (2) It is located at the bottom left corner of the screen within the navigation bar."
-"[0, 2320, 1440, 240, 118]","[0, 264, 1440, 2296, 16]","(1) This is the home button on the navigation bar.
+"[0.0, 580.0, 360.0, 60.0, 29.0]","[0.0, 66.0, 360.0, 574.0, 4.0]","(1) This is the home button on the navigation bar.
 (2) It is located at the bottom-left corner of the navigation bar on the screen. The navigation bar is at the bottom of the overall screen."
-"[0, 2320, 288, 240, 119]","[0, 2320, 1440, 240, 118]","(1) This is the ""Home"" button, which features an icon of a house and the text ""Home"".
+"[0.0, 580.0, 72.0, 60.0, 29.0]","[0.0, 580.0, 360.0, 60.0, 29.0]","(1) This is the ""Home"" button, which features an icon of a house and the text ""Home"".
 
 (2) It is located in the bottom left corner of the navigation bar. The navigation bar itself is positioned at the bottom of the screen."
-"[48, 2356, 192, 96, 120]","[0, 2320, 1440, 240, 118]","(1) This is the ""Home"" icon located in the navigation bar.
+"[12.0, 589.0, 48.0, 24.0, 30.0]","[0.0, 580.0, 360.0, 60.0, 29.0]","(1) This is the ""Home"" icon located in the navigation bar.
 (2) It is located on the far left of the navigation bar at the bottom of the screen. The navigation bar itself is at the bottom of the complete screen."
-"[48, 2356, 192, 96, 121]","[0, 2320, 1440, 240, 118]","(1) This is the ""Home"" button with a house icon.
+"[12.0, 589.0, 48.0, 24.0, 30.0]","[0.0, 580.0, 360.0, 60.0, 29.0]","(1) This is the ""Home"" button with a house icon.
 (2) It is located at the bottom left corner of the navigation bar, which is at the bottom of the screen."
-"[108, 2368, 72, 72, 123]","[0, 2320, 1440, 240, 118]","(1) This is the ""Home"" button.
+"[27.0, 592.0, 18.0, 18.0, 30.0]","[0.0, 580.0, 360.0, 60.0, 29.0]","(1) This is the ""Home"" button.
 (2) It is located in the bottom left corner of the navigation bar, which is positioned at the bottom of the overall screen."
-"[88, 2477, 111, 83, 125]","[0, 2320, 1440, 240, 118]","(1) This is the ""Home"" button, indicated by an icon of a house and the text ""Home"". 
+"[22.0, 619.0, 27.0, 20.0, 31.0]","[0.0, 580.0, 360.0, 60.0, 29.0]","(1) This is the ""Home"" button, indicated by an icon of a house and the text ""Home"". 
 
 (2) It is located at the bottom left corner of the navigation bar, which spans the width of the screen and is situated just above the screen’s bottom edge."
-"[288, 2320, 288, 240, 128]","[0, 2320, 1440, 240, 118]","(1) ""My eBay"" icon. 
+"[72.0, 580.0, 72.0, 60.0, 32.0]","[0.0, 580.0, 360.0, 60.0, 29.0]","(1) ""My eBay"" icon. 
 (2) In the bottom navigation bar, second item from the left. The bottom navigation bar is located at the bottom of the screen."
-"[354, 2477, 156, 83, 132]","[0, 2320, 1440, 240, 118]","(1) ""My eBay""
+"[88.0, 619.0, 39.0, 20.0, 33.0]","[0.0, 580.0, 360.0, 60.0, 29.0]","(1) ""My eBay""
 (2) It is located in the bottom navigation bar of the screen, next to the ""Home"" icon on the left."
-"[576, 2320, 288, 240, 136]","[0, 2320, 1440, 240, 118]","(1) Search icon
+"[144.0, 580.0, 72.0, 60.0, 34.0]","[0.0, 580.0, 360.0, 60.0, 29.0]","(1) Search icon
 (2) Centered in the bar at the bottom of the screen."
-"[654, 2477, 131, 83, 140]","[0, 2320, 1440, 240, 118]","(1) This is the ""Search"" button.
+"[163.0, 619.0, 32.0, 20.0, 35.0]","[0.0, 580.0, 360.0, 60.0, 29.0]","(1) This is the ""Search"" button.
 (2) It is located in the bottom navigation bar, positioned centrally between the ""My eBay"" and ""Inbox"" buttons. The bottom navigation bar is situated at the bottom of the screen."
-"[864, 2320, 288, 240, 145]","[0, 2320, 1440, 240, 118]","(1) Inbox
+"[216.0, 580.0, 72.0, 60.0, 36.0]","[0.0, 580.0, 360.0, 60.0, 29.0]","(1) Inbox
 (2) Located in the bottom navigation bar of the screen, toward the right side."
-"[956, 2477, 104, 83, 149]","[0, 2320, 1440, 240, 118]","(1) This is the ""Inbox"" icon.
+"[239.0, 619.0, 26.0, 20.0, 37.0]","[0.0, 580.0, 360.0, 60.0, 29.0]","(1) This is the ""Inbox"" icon.
 (2) It is located on the bottom navigation bar, to the right of the ""Search"" icon and to the left of the ""Selling"" icon. This navigation bar is at the bottom of the complete screen."
-"[1152, 2320, 288, 240, 155]","[0, 2320, 1440, 240, 118]","(1) This is the ""Selling"" tab icon used in the eBay app. 
+"[288.0, 580.0, 72.0, 60.0, 38.0]","[0.0, 580.0, 360.0, 60.0, 29.0]","(1) This is the ""Selling"" tab icon used in the eBay app. 
 (2) It is located at the right side of the bottom navigation bar of the screen, which appears in the lower section of the full app interface."
-"[1232, 2477, 127, 83, 159]","[0, 2320, 1440, 240, 118]","(1) Selling.
+"[308.0, 619.0, 31.0, 20.0, 39.0]","[0.0, 580.0, 360.0, 60.0, 29.0]","(1) Selling.
 (2) It is the fifth item in the navigation bar at the bottom of the screen. The navigation bar itself is located at the bottom section of the complete screen."
-"[0, 0, 150, 80, 0]","[0, 0, 1440, 100, 0]","(1) The time displayed on the status bar is 11:23.
+"[0.0, 0.0, 37.0, 20.0, 0.0]","[0.0, 0.0, 360.0, 25.0, 0.0]","(1) The time displayed on the status bar is 11:23.
 (2) This status bar is situated at the top-left corner of the screen, and the entire status bar itself spans across the top of the screen."
-"[150, 0, 50, 80, 0]","[0, 0, 1440, 100, 0]","(1) This is an icon of a shield with a checkmark.
+"[37.0, 0.0, 12.0, 20.0, 0.0]","[0.0, 0.0, 360.0, 25.0, 0.0]","(1) This is an icon of a shield with a checkmark.
 (2) It is located on the left side within a row of icons at the top of the screen. This row of icons is near the top-left corner of the complete screen."
-"[200, 0, 60, 80, 0]","[0, 0, 1440, 100, 0]","(1) This is a padlock icon.
+"[50.0, 0.0, 15.0, 20.0, 0.0]","[0.0, 0.0, 360.0, 25.0, 0.0]","(1) This is a padlock icon.
 (2) It is located on the left side of the top status bar, which spans horizontally across the top of the entire screen."
-"[260, 0, 60, 80, 0]","[0, 0, 1440, 100, 0]","(1) This is a cloud icon. 
+"[65.0, 0.0, 15.0, 20.0, 0.0]","[0.0, 0.0, 360.0, 25.0, 0.0]","(1) This is a cloud icon. 
 
 (2) It is located in the middle left section of the status bar at the top of the screen. The status bar itself is situated at the very top of the complete screen."
-"[1190, 0, 120, 80, 0]","[0, 0, 1440, 100, 0]","(1) This is the indicator showing the 3G network status. 
+"[297.0, 0.0, 30.0, 20.0, 0.0]","[0.0, 0.0, 360.0, 25.0, 0.0]","(1) This is the indicator showing the 3G network status. 
 (2) It is located at the top right corner of the status bar on the screen."
-"[1310, 0, 80, 80, 0]","[0, 0, 1440, 100, 0]","(1) This is the battery icon.
+"[327.0, 0.0, 20.0, 20.0, 0.0]","[0.0, 0.0, 360.0, 25.0, 0.0]","(1) This is the battery icon.
 (2) It is located at the top right corner of the screen, within a smaller box that is situated on the right side of a larger box, which is across the top section of the complete screen."
-"[0, 120, 360, 120, 0]","[0, 72, 1440, 192, 8]","(1) This is the eBay logo.
+"[0.0, 30.0, 90.0, 30.0, 0.0]","[0.0, 18.0, 360.0, 48.0, 2.0]","(1) This is the eBay logo.
 (2) It is located at the upper left corner of the screen."
