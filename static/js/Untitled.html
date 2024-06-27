@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Click Bounding Boxes</title>
+    <style>
+        .has-text-centered {
+            text-align: center;
+            font-size: 16px;
+        }
+        #coordinates {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        #image-container {
+            position: relative;
+            display: inline-block;
+        }
+        .dot {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: rgba(255, 0, 0, 0.5); /* Red with 50% opacity */
+            border-radius: 50%;
+        }
+        .bbox {
+            position: absolute;
+            border: 2px solid red; /* Red border for bbox */
+            box-sizing: border-box;
+        }
+        .bbox-large {
+            position: absolute;
+            border: 2px solid green; /* Green border for bbox_large */
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="has-text-centered">Click on the Image</h1>
+    <div id="image-container">
+        <img id="image" src="https://via.placeholder.com/600x400" alt="Clickable Image" style="max-width: 100%; height: auto;">
+    </div>
+    <div id="coordinates" class="has-text-centered">Click coordinates will appear here.</div>
+
+    <!-- Include the local PapaParse library -->
+    <script src="papaparse.min.js"></script>
+    <script>
+        // Example CSV content with correct format
+        const csvContent = `
+bbox,bbox_large,output
+10,10,50,50,5,5,60,60,Output 1
+100,100,30,30,95,95,40,40,Output 2
+`;
+
+        // Parse CSV content
+        Papa.parse(csvContent, {
+            header: false,
+            skipEmptyLines: true,
+            complete: function(results) {
+                window.data = results.data.map(row => ({
+                    bbox: row.slice(0, 4).join(','),
+                    bbox_large: row.slice(4, 8).join(','),
+                    output: row[8]
+                }));
+                console.log("CSV Data Loaded: ", window.data);
+            }
+        });
+
+        document.getElementById('image').addEventListener('click', function(event) {
+            // Remove any existing dot or bounding boxes
+            document.querySelectorAll('.dot, .bbox, .bbox-large').forEach(elem => elem.remove());
+
+            let x = event.offsetX;
+            let y = event.offsetY;
+            document.getElementById('coordinates').innerText = `X: ${x}, Y: ${y}`;
+
+            // Draw the click point dot
+            let dot = document.createElement('div');
+            dot.className = 'dot';
+            dot.style.left = `${x - 5}px`; // Adjusting to center the dot on click
+            dot.style.top = `${y - 5}px`;  // Adjusting to center the dot on click
+            document.getElementById('image-container').appendChild(dot);
+
+            // Find the smallest bbox that contains the point
+            let minArea = Infinity;
+            let selectedRow = null;
+            window.data.forEach(row => {
+                console.log("Row Data: ", row); // Log the entire row to see its structure
+                if (row.bbox && row.bbox_large) { // Ensure bbox and bbox_large exist
+                    const bbox = row.bbox.split(',').map(Number);
+                    const [bx, by, bw, bh] = bbox;
+                    console.log(`Checking bbox: ${bbox} with click coordinates: (${x}, ${y})`);
+                    if (x >= bx && x <= bx + bw && y >= by && y <= by + bh) {
+                        const area = bw * bh;
+                        console.log(`Click is inside bbox: ${bbox} with area: ${area}`);
+                        if (area < minArea) {
+                            minArea = area;
+                            selectedRow = row;
+                        }
+                    } else {
+                        console.log(`Click is outside bbox: ${bbox}`);
+                    }
+                }
+            });
+
+            if (selectedRow) {
+                console.log("Selected Row: ", selectedRow);
+
+                const bbox = selectedRow.bbox.split(',').map(Number);
+                const bboxLarge = selectedRow.bbox_large.split(',').map(Number);
+
+                // Draw bbox
+                const bboxDiv = document.createElement('div');
+                bboxDiv.className = 'bbox';
+                bboxDiv.style.left = `${bbox[0]}px`;
+                bboxDiv.style.top = `${bbox[1]}px`;
+                bboxDiv.style.width = `${bbox[2]}px`;
+                bboxDiv.style.height = `${bbox[3]}px`;
+                document.getElementById('image-container').appendChild(bboxDiv);
+
+                // Draw bbox_large
+                const bboxLargeDiv = document.createElement('div');
+                bboxLargeDiv.className = 'bbox-large';
+                bboxLargeDiv.style.left = `${bboxLarge[0]}px`;
+                bboxLargeDiv.style.top = `${bboxLarge[1]}px`;
+                bboxLargeDiv.style.width = `${bboxLarge[2]}px`;
+                bboxLargeDiv.style.height = `${bboxLarge[3]}px`;
+                document.getElementById('image-container').appendChild(bboxLargeDiv);
+            } else {
+                console.log("No bounding box contains the click point.");
+            }
+        });
+    </script>
+</body>
+</html>

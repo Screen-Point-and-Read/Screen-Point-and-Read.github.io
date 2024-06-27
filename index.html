@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Read Anywhere Pointed: Layout-aware GUI Screen Reading with Tree-of-Lens Grounding">
+  <meta name="keywords" content="Screen Point-and-Read (ScreenPR), Tree-of-Lens (ToL), screen agent">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Read Anywhere Pointed: Layout-aware GUI Screen Reading with Tree-of-Lens Grounding</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="icon" href="./static/images/icon.png">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <!-- <script src="https://assets.crowd.aws/crowd-html-elements.js"></script> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+
+
+
+
+  <style>
+	    
+		.image-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px; /* Adjust the gap between images as needed */
+        }
+        .image-container {
+	        position: relative;            
+	        display: inline-block;
+            text-align: center;
+            width: 45%; /* Adjust the width of each container as needed */
+            
+        }
+        .image-container img {
+            width: 100%; /* Ensures the image fills the container width */
+        }
+        .image-container p {
+            font-family: "Times New Roman", Times, serif;
+            font-weight: bold;
+        }
+        .image-container2 img#teaser1:hover {
+            content: url('./static/image/agent_structure.gif'); /* Change image source on hover */
+		}
+        .image-container p {
+            font-family: "Times New Roman", Times, serif;
+            font-weight: bold;
+        }
+        .has-text-centered {
+            text-align: center;
+            font-size: 16px;
+        }
+        #coordinates {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        #image-container {
+            position: relative;
+            display: inline-block;
+        }
+        .dot {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: rgba(255, 0, 0, 0.5); /* Red with 50% opacity */
+            border-radius: 50%;
+        }
+        .bbox {
+            position: absolute;
+            border: 2px solid red; /* Red border for bbox */
+        }
+        .bbox-large {
+            position: absolute;
+            border: 2px solid green; /* Green border for bbox_large */
+        }
+        crowd-alert {
+      display: none !important;
+    }
+  </style>
+  
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <div style="display: flex; align-items: center; justify-content: center;">
+            <!-- <img src="./static/image/worldevallogo.png" style="width:6em;vertical-align: middle" alt="Logo"/>  -->
+            <h1 class="title is-1 publication-title" style="display: inline-block;">Read Anywhere Pointed: Layout-aware GUI Screen Reading with Tree-of-Lens Grounding</h1>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="http://www.yfan.site/">Yue Fan</a><sup style="color: #FFB6C1;">†,1</sup>,</span>
+            <span class="author-block">
+              <a href="https://llv22.github.io/orlando.github.io/">Lei Ding</a><sup style="color: #FFB6C1;">1</sup>,</span>
+            <span class="author-block">
+              Ching-Chen Kuo</a><sup style="color: #90EE90;">2</sup>,</span>
+            <span class="author-block">
+              Shan Jiang</a><sup style="color: #90EE90;">2</sup>,</span>
+            <span class="author-block">
+              Yang Zhao</a><sup style="color: #90EE90;">2</sup>,</span>
+            <span class="author-block">
+                Xinze Guan</a><sup style="color: #90EE90;">2</sup>,</span>
+            <span class="author-block">
+                  Jie Yang</a><sup style="color: #ADD8E6;">3</sup>,</span>
+            <span class="author-block">
+              <a href="https://sites.google.com/ucsc.edu/yizhang">Yi Zhang</a><sup style="color: #FFB6C1;">2</sup>,</span>
+            <span class="author-block">
+              <a href="https://eric-xw.github.io/">Xin Eric Wang</a><sup style="color: #FFB6C1;">†,1</sup>,</span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup style="color: #FFB6C1;">1</sup>UC Santa Cruz,</span>
+            <span class="author-block"><sup style="color: #90EE90;">2</sup>eBay,</span>
+            <span class="author-block"><sup style="color: #ADD8E6;">3</sup>Cybever</span>
+          </div>
+          <!-- <br>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><b style="color:#e08ba0; font-weight:normal"> <b>Under Review</b> </b></span>
+          </div> -->
+      	<br>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">†Corresponding to:</span>
+            <span class="author-block"><a href="mailto:xhe89@ucsc.edu">yfan71@ucsc.edu</a>,</span>
+            <span class="author-block"><a href="mailto:xwang366@ucsc.edu">xwang366@ucsc.edu</a></span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/eric-ai-lab/MMWorld"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <span class="link-block">
+                <a href="https://huggingface.co/datasets/yfan1997/ScreenPR"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-database"></i>
+                  </span>
+                  <span>Benchmark with dataviewer</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              
+
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+    	<h2 class="subtitle has-text-centered">
+	        <div class="image-row">
+	            
+	            <div class="image-container" style="width: 60%;">
+	                <img  src="./static/image/Figure1.png" alt="ToL agent short gif" >
+	                
+	            </div>
+	            
+	        </div>
+	         <p style="font-family:Times New Roman">Our ToL agent describes the region on the screenshot indicated by a point from the user.</p>
+	    </h2>
+        <h2 class="subtitle has-text-centered" >
+       	
+      <img src="./static/image/ToL agent_short.gif" style="width: 70%;">
+        <p style="font-family:Times New Roman">The generated descriptions includes important layout-information, which is critical because without it, one cannot distinguish the two identical "Tumbler pack" shown.</p>
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+           Graphical User Interfaces (GUIs) are central to our interaction with digital devices. Recently, growing efforts have been made to build models for various GUI understanding tasks. However, these efforts largely overlook an important GUI-referring task: screen reading based on user-indicated points, which we name the Screen Point-and-Read (SPR) task. This task is predominantly handled by rigid accessible screen reading tools, in great need of new models driven by advancements in Multimodal Large Language Models (MLLMs). In this paper, we propose a Tree-of-Lens (ToL) agent, utilizing a novel ToL grounding mechanism, to address the SPR task. Based on the input point coordinate and the corresponding GUI screenshot, our ToL agent constructs a Hierarchical Layout Tree. Based on the tree, our ToL agent not only comprehends the content of the indicated area but also articulates the layout and spatial relationships between elements. Such layout information is crucial for accurately interpreting information on the screen, distinguishing our ToL agent from other screen reading tools. We also thoroughly evaluate the ToL agent against other baselines on a newly proposed SPR benchmark, which includes GUIs from mobile, web, and operating systems. Last but not least, we test the ToL agent on mobile GUI navigation tasks, demonstrating its utility in identifying incorrect actions along the path of agent execution trajectories.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-fifths">
+      
+        <h2 class="title is-3"> Tree-of-Lens (ToL) Agent </h2> 
+      </div>
+    </div>
+
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-six-fifths">  
+          <div class="image-container2">
+            <img id="teaser1"  class="hover-agent_structure_gif" src="./static/image/agent-structure.png" alt="agent">
+          </div>
+            <h3 class="subtitle has-text-centered">
+              <p style="font-family:Times New Roman">Pipeline of the Tree-of-Lens agent. The Hierarchical Layout Tree is first constructed based on detected global and local regions from the input screenshot. Then, a set of hierarchical lenses with various field widths is generated from the selected target path in the tree and sent as visual prompts to GPT-4o to generate the content and layout descriptions.</p>
+            </h3>   
+        </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-fifths">
+        <h2 class="title is-3">Screen Point-and-Read (ScreenPR) Benchmark <a href="https://huggingface.co/datasets/yfan1997/ScreenPR"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-database"></i>
+                  </span>
+                </a></h2> 
+      </div>
+    </div>
+    <div class="image-row">
+        <div class="gallery">
+        <img src="image1.jpg" alt="Image 1">
+        <img src="image2.jpg" alt="Image 2">
+        <img src="image3.jpg" alt="Image 3">
+        <img src="image4.jpg" alt="Image 4">
+        <img src="image1.jpg" alt="Image 1">
+        <img src="image2.jpg" alt="Image 2">
+        <img src="image3.jpg" alt="Image 3">
+        <img src="image4.jpg" alt="Image 4">
+        <img src="image1.jpg" alt="Image 1">
+        <img src="image2.jpg" alt="Image 2">
+        <img src="image3.jpg" alt="Image 3">
+        <img src="image4.jpg" alt="Image 4">
+   		</div>
+        <div class="image-container" style="width: 90%;">
+            <img  src="./static/image/benchmark_stats.png" alt="stats">
+            
+        </div>
+        
+    </div>
+	<h3 class="subtitle has-text-centered">
+              <p style="font-family:Times New Roman">Screen Point-and-Read (ScreenPR) benchmark is introduced to rigorously evaluate our ToL agent on the ScreenPR task, where descriptions are required based on user-indicated points on screenshots. It covers a diverse domain of GUIs. Each screenshot is annotated with about 2 target points and their corresponding local regions on the screenshot.</p>
+            </h3>   
+	  
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+        <h2 class="title is-3">Main Result</h2> 
+    </div>
+      
+      <h2 class="subtitle has-text-centered">
+	      <div class="image-row">
+		      <div  class="image-container">
+		      	<img src="./static/image/cycle_eval.gif" alt="cycle_eval">
+		      </div>
+		      <div class="image-container" style="width: 70%;">
+		      	<img  src="./static/image/results.png" alt="res" >
+		      </div>
+		  </div>
+	  </h2>
+    </div>
+
+        <h3 class="subtitle has-text-centered">
+              <p style="font-family:Times New Roman">Main results. We evaluate our ToL agent against three other baselines with <b>human evaluation</b> and <b>cycle consistency evaluation (shown on the left)</b> of our ScreenPR benchmark. Additionally, we compare the generated content descriptions with human verified content descriptions using language similarity scores. The results show that the ToL agent achieves the best performance.</p>
+        </h3>   
+
+     
+        
+  </div>
+</section>
+
+
+
+
+
+
+ <section class="section" id="Demo">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-fifths">
+        <h2 class="title is-3"><img id="painting_icon" width="5%" src="https://cdn-icons-png.flaticon.com/512/5379/5379860.png"> Demo</h2>
+      </div>
+    </div>
+ </section> 
+
+<div id="image-container">
+        <img id="image" src="./static/image/task1979_1.jpeg" >
+    </div>
+    <div>
+    <div id="coordinates" class="has-text-centered">Click coordinates will appear here.</div>
+    <div id="output_description" class="has-text-centered">Output description will appear here.</div>
+ </div>
+ </div>
+
+    <!-- Include the local PapaParse library -->
+    <script src="./static/js/papaparse.min.js"></script>
+    <script>
+
+        // Predefined path to the CSV file
+        const csvFilePath = './static/output.csv'; // Change this to your CSV file path
+
+       // Load the CSV file using Fetch API
+        fetch(csvFilePath)
+            .then(response => response.text())
+            .then(csvContent => {
+                Papa.parse(csvContent, {
+                    header: false,
+                    skipEmptyLines: true,
+                    complete: function(results) {
+                        window.data = results.data.map(row => ({
+                            bbox: row[0].replace(/[\[\]]/g, '').split(',').slice(0, -1).join(','),
+                            bbox_large: row[1].replace(/[\[\]]/g, '').split(',').slice(0, -1).join(','),
+                            output: row[2]
+                        }));
+                        console.log("CSV Data Loaded: ", window.data);
+                    }
+                });
+            })
+            .catch(error => console.error('Error loading CSV file:', error));
+
+        document.getElementById('image').addEventListener('click', function(event) {
+            // Remove any existing dot or bounding boxes
+            document.querySelectorAll('.dot, .bbox, .bbox-large').forEach(elem => elem.remove());
+
+            let x = event.offsetX;
+            let y = event.offsetY;
+            document.getElementById('coordinates').innerText = `Point input to ToL agent: (x,y) = (${x}, ${y})`;
+
+            // Draw the click point dot
+            let dot = document.createElement('div');
+            dot.className = 'dot';
+            dot.style.left = `${x - 5}px`; // Adjusting to center the dot on click
+            dot.style.top = `${y - 5}px`;  // Adjusting to center the dot on click
+            document.getElementById('image-container').appendChild(dot);
+
+            // Find the smallest bbox that contains the point
+            let minArea = Infinity;
+            let selectedRow = null;
+            window.data.forEach(row => {
+                console.log("Row Data: ", row); // Log the entire row to see its structure
+                if (row.bbox && row.bbox_large) { // Ensure bbox and bbox_large exist
+                    const bbox = row.bbox.split(',').map(Number);
+                    const [bx, by, bw, bh] = bbox;
+                    console.log(`Checking bbox: ${bbox} with click coordinates: (${x}, ${y})`);
+                    if (x >= bx && x <= bx + bw && y >= by && y <= by + bh) {
+                        const area = bw * bh;
+                        console.log(`Click is inside bbox: ${bbox} with area: ${area}`);
+                        if (area < minArea) {
+                            minArea = area;
+                            selectedRow = row;
+                        }
+                    } else {
+                        console.log(`Click is outside bbox: ${bbox}`);
+                    }
+                }
+            });
+
+            if (selectedRow) {
+                console.log("Selected Row: ", selectedRow);
+				document.getElementById('output_description').innerText = `Output from ToL agent: ${selectedRow['output']}`;
+                const bbox = selectedRow.bbox.split(',').map(Number);
+                const bboxLarge = selectedRow.bbox_large.split(',').map(Number);
+
+                // Draw bbox
+                const bboxDiv = document.createElement('div');
+                bboxDiv.className = 'bbox';
+                bboxDiv.style.left = `${bbox[0]}px`;
+                bboxDiv.style.top = `${bbox[1]}px`;
+                bboxDiv.style.width = `${bbox[2]}px`;
+                bboxDiv.style.height = `${bbox[3]}px`;
+                document.getElementById('image-container').appendChild(bboxDiv);
+
+                // Draw bbox_large
+                const bboxLargeDiv = document.createElement('div');
+                bboxLargeDiv.className = 'bbox-large';
+                bboxLargeDiv.style.left = `${bboxLarge[0]}px`;
+                bboxLargeDiv.style.top = `${bboxLarge[1]}px`;
+                bboxLargeDiv.style.width = `${bboxLarge[2]}px`;
+                bboxLargeDiv.style.height = `${bboxLarge[3]}px`;
+                document.getElementById('image-container').appendChild(bboxLargeDiv);
+            } else {
+                console.log("No bounding box contains the click point.");			
+            }
+        });
+    </script>
+    
+    
+    
+    
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+      @article{he2024mmworld,
+        title   = {Read Anywhere Pointed: Layout-aware GUI Screen Reading with Tree-of-Lens Grounding},
+        author  = {Xuehai He and Weixi Feng and Kaizhi Zheng and Yujie Lu and Wanrong Zhu and Jiachen Li and Yue Fan and Jianfeng Wang and Linjie Li and Zhengyuan Yang and Kevin Lin and William Yang Wang and Lijuan Wang and Xin Eric Wang},
+        year    = {2024},
+        journal = {arXiv preprint arXiv: 2406.08407}
+      }
+    </code></pre>
+  </div>
+</section>
+
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is adapted from <a rel="license"
+            href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> and <a rel="license"
+            href="https://gligen.github.io/">GLIGEN</a>, licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+
+<!-- Additional libraries for parsing CSV -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.21/jquery.csv.min.js"></script>
+
+</body>
+</html>
