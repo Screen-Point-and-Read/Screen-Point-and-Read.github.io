@@ -154,7 +154,7 @@
         <div class="column has-text-centered">
           <div style="display: flex; align-items: center; justify-content: center;">
             <!-- <img src="./static/image/worldevallogo.png" style="width:6em;vertical-align: middle" alt="Logo"/>  -->
-            <h1 class="title is-1 publication-title" style="display: inline-block;">Read Anywhere Pointed: Layout-aware GUI Screen Reading with Tree-of-Lens Grounding</h1>
+            <h1 class="title is-1 publication-title" style="display: inline-block;">Read Anywhere Pointed:<br> Layout-aware GUI Screen Reading with Tree-of-Lens Grounding</h1>
           </div>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
@@ -197,7 +197,7 @@
               <!-- PDF Link. -->
 
               <span class="link-block">
-                <a href=""
+                <a href="http://arxiv.org/abs/2406.19263"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -268,7 +268,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-           Graphical User Interfaces (GUIs) are central to our interaction with digital devices. Recently, growing efforts have been made to build models for various GUI understanding tasks. However, these efforts largely overlook an important GUI-referring task: screen reading based on user-indicated points, which we name the Screen Point-and-Read (SPR) task. This task is predominantly handled by rigid accessible screen reading tools, in great need of new models driven by advancements in Multimodal Large Language Models (MLLMs). In this paper, we propose a Tree-of-Lens (ToL) agent, utilizing a novel ToL grounding mechanism, to address the SPR task. Based on the input point coordinate and the corresponding GUI screenshot, our ToL agent constructs a Hierarchical Layout Tree. Based on the tree, our ToL agent not only comprehends the content of the indicated area but also articulates the layout and spatial relationships between elements. Such layout information is crucial for accurately interpreting information on the screen, distinguishing our ToL agent from other screen reading tools. We also thoroughly evaluate the ToL agent against other baselines on a newly proposed SPR benchmark, which includes GUIs from mobile, web, and operating systems. Last but not least, we test the ToL agent on mobile GUI navigation tasks, demonstrating its utility in identifying incorrect actions along the path of agent execution trajectories.
+           Graphical User Interfaces (GUIs) are central to our interaction with digital devices. Recently, growing efforts have been made to build models for various GUI understanding tasks. However, these efforts largely overlook an important GUI-referring task: screen reading based on user-indicated points, which we name the Screen Point-and-Read (ScreenPR) task. This task is predominantly handled by rigid accessible screen reading tools, in great need of new models driven by advancements in Multimodal Large Language Models (MLLMs). In this paper, we propose a Tree-of-Lens (ToL) agent, utilizing a novel ToL grounding mechanism, to address the ScreenPR task. Based on the input point coordinate and the corresponding GUI screenshot, our ToL agent constructs a Hierarchical Layout Tree. Based on the tree, our ToL agent not only comprehends the content of the indicated area but also articulates the layout and spatial relationships between elements. Such layout information is crucial for accurately interpreting information on the screen, distinguishing our ToL agent from other screen reading tools. We also thoroughly evaluate the ToL agent against other baselines on a newly proposed ScreenPR benchmark, which includes GUIs from mobile, web, and operating systems. Last but not least, we test the ToL agent on mobile GUI navigation tasks, demonstrating its utility in identifying incorrect actions along the path of agent execution trajectories. 
           </p>
         </div>
       </div>
@@ -519,19 +519,22 @@
     
     
     
-<!-- <section class="section" id="BibTeX"> -->
-<!--   <div class="container is-max-desktop content"> -->
-<!--     <h2 class="title">BibTeX</h2> -->
-<!--     <pre><code> -->
-<!--       @article{he2024mmworld, -->
-<!--         title   = {Read Anywhere Pointed: Layout-aware GUI Screen Reading with Tree-of-Lens Grounding}, -->
-<!--         author  = {Xuehai He and Weixi Feng and Kaizhi Zheng and Yujie Lu and Wanrong Zhu and Jiachen Li and Yue Fan and Jianfeng Wang and Linjie Li and Zhengyuan Yang and Kevin Lin and William Yang Wang and Lijuan Wang and Xin Eric Wang}, -->
-<!--         year    = {2024}, -->
-<!--         journal = {arXiv preprint arXiv: 2406.08407} -->
-<!--       } -->
-<!--     </code></pre> -->
-<!--   </div> -->
-<!-- </section> -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+      @misc{fan2024readpointedlayoutawaregui,
+      title={Read Anywhere Pointed: Layout-aware GUI Screen Reading with Tree-of-Lens Grounding}, 
+      author={Yue Fan and Lei Ding and Ching-Chen Kuo and Shan Jiang and Yang Zhao and Xinze Guan and Jie Yang and Yi Zhang and Xin Eric Wang},
+      year={2024},
+      eprint={2406.19263},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2406.19263}, 
+}
+    </code></pre>
+  </div>
+</section>
 
 
 
